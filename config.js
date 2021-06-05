@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+// Just import 'dotenv' and your variable from .env file can be accessed in config
+
 module.exports = {
   port: process.env[`${process.env.NODE_ENV}_PORT`],
   databaseHost: process.env[`${process.env.NODE_ENV}_DB_HOST`],
@@ -7,7 +9,7 @@ module.exports = {
   databasePassword: process.env[`${process.env.NODE_ENV}_DB_PASSWORD`],
   databaseName: process.env[`${process.env.NODE_ENV}_DB_NAME`],
   // databaseInitial: process.env[`${process.env.NODE_ENV}_DB_INITIAL`],
-  // database: process.env[`${process.env.NODE_ENV}_DB`],
+  database: process.env[`${process.env.NODE_ENV}_DB`],
   databasePort: process.env[`${process.env.NODE_ENV}_DB_PORT`],
   mongoDBConnectionString:
     process.env[`${process.env.NODE_ENV}_MONGO_DB_CONN_STRING`],
